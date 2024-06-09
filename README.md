@@ -2,12 +2,16 @@ To implement the supermarket application in C, combining the warehouse and custo
 
 1.Warehouse Desk: Allows adding and updating items.
 2.Customer Desk: Allows generating bills, updating stock, and generating reports.
-
-
-To implement the supermarket application in C, combining the warehouse and customer desk functionalities while using text files for the database, we need to structure the program to handle reading from and writing to files for data persistence. Below is an example of how you can achieve this:
-
-Warehouse Desk: Allows adding and updating items.
-Customer Desk: Allows generating bills, updating stock, and generating reports.
+//////////////////////////////////////////////////////
+Changes Made:
+String Formatting: Changed the format specifier in fscanf and fprintf to properly handle strings (%99[^,] ensures it doesn't overflow the buffer).
+Initialize customer Structure: Properly initialize the Customer structure to avoid segmentation faults.
+Fixed Buffer Overflows: Ensured no buffer overflows by using the correct format specifiers and array lengths.
+Instructions:
+Warehouse File Format: The warehouse.txt should contain lines with the format: HSN Code,Description,Quantity,MRP.
+Customer File Format: The customers.txt should contain lines with the format: Customer Name,Purchase Count,Total Bill followed by lines with the format: HSN Code,Description,Quantity,MRP for each purchase.
+This program will now properly handle the addition of items, generation of bills, updating of stock, and generation of reports. Adjustments can be made based on specific requirements or constraints.
+///////////////////////////////////////////////////////
 
 Explanation:
 Data Structures:
